@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "my-edge-gist",
+  "compatibility_date": "2026-05-08",
+  "main": "./dist/_worker.js",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "EDGEGIST_BASE_URL": "https://gist.114514.my.id",
+    "EDGEGIST_HISTORY_MAX_VERSIONS": "100",
+    "EDGEGIST_TURNSTILE_SITE_KEY": "0x4AAAAAADx6nPzVQQ_SSduV"
+  },
+  "secrets": {
+    "required": [
+      "EDGEGIST_OWNER_USERNAME",
+      "EDGEGIST_OWNER_PASSWORD",
+      "EDGEGIST_OWNER_TOKEN",
+      "EDGEGIST_TURNSTILE_SECRET_KEY"
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "d1-my-edge-gist",
+      "database_id": "6567505f-18ef-43ca-b608-c42f9cc35037"
+    }
+  ]
+}

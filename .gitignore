@@ -81,7 +81,6 @@ typings/
 .env
 .env.test
 .dev.vars
-wrangler.jsonc
 .wrangler/
 .tmp/
 
